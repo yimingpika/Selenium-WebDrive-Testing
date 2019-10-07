@@ -26,19 +26,16 @@ public class DemoTest{
 		
 		WebDriverWait waitforlogin = new WebDriverWait(driver, 10);//10 sec
 		WebElement element3 = waitforlogin.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'login-app\']/div/div[2]/div[2]/span")));
-		
-		
-		// click checkbox
 		driver.findElement(By.xpath("//*[@id=\'geetest-wrap\']/ul/li[4]/label/input")).click();
+		
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@id=\'login-username\']")).sendKeys("yimingpika@gmail.com");
 		driver.findElement(By.xpath("//*[@id=\'login-passwd\']")).sendKeys("secret");
+		
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@id=\'geetest-wrap\']/ul/li[5]/a[1]")).click();
+
 		Thread.sleep(1000);
-		// click checkbox
-		driver.findElement(By.xpath("//*[@id=\'geetest-wrap\']/ul/li[4]/label/input")).click();
-		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id=\'login-app\']/div/div[2]/p/a[1]")).click();
 		
 		Thread.sleep(3000);
